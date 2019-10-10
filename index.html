@@ -1,127 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<title>Simple Calculator</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script type="text/javascript">
-		function insert(num){
-			document.form.textview.value = document.form.textview.value + num;
-
-		}
-
-		function equal(){
-			var exp = document.form.textview.value;
-			if(exp){
-				document.form.textview.value=eval(exp);
-			}
-		}
-			function clean(){
-				document.form.textview.value = "";
-			}
-			function back(){
-				var exp = document.form.textview.value;
-				document.form.textview.value = 	exp.substring(0, exp.length - 1);
-			}
-
-	</script>
-
-	<style type="text/css">
-		body {
-		  -webkit-animation: background 15s cubic-bezier(1,0,0,1) infinite;
-		  animation: background 15s cubic-bezier(1,0,0,1) infinite;  
-		}
-
-
-		@-webkit-keyframes background {
-		  0% { background-color: #5ebf4b;}
-		  25% { background-color: #34cac3;}  
-		  50% { background-color: #fca011;}
-		  75% { background-color: #fd374f;}
-		  100% { background-color: #874cbd;}
-		  
-		}
-
-		@keyframes background {
-		  0% { background-color: #5ebf4b;}
-		  25% { background-color: #34cac3;}  
-		  50% { background-color: #fca011;}
-		  75% { background-color: #fd374f;}
-		  100% { background-color: #874cbd;}
-			
-		}
-		h1
-		{
-			color:white;
-			padding:10px;
-		}
-		*{
-			margin : 0;
-			padding: 0;
-			text-align:centre;
-
-		}
-		.button{
-			cursor: pointer;
-			font-size: 25px;
-			margin:2px;
-			width: 50px;
-			height: 50px;
-			background:white;
-			border:0px;
-		}
-		.textview{
-			font-size: 25px;
-			margin:5px;
-			padding: 7px;
-			width: 203px;
-			
-			background:white;
-			
-		}
-
-	</style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Calculator</title>
+	<link href="./style.css" rel="stylesheet" type="text/css">
+	</link>
 </head>
 <body>
+	<h1>JavaScript Calculator</h1>
+	<p class="warning">Don't divide by Zero.</p>
+	<div id="calculator" class="calculator">
+		<button id="clear" class="clear">C</button>
 
-	<div class="main">
-		<center>
-		<h1>Simple Calculator</h1>
-		<form name="form">
-			<input class="textview" name="textview">
-		</form>
-		<table>
-			<tr>
-				<td><input class="button" type="button" onclick="clean()" value="C"></td>
-				<td><input class="button" type="button" onclick="back()" value="&#xab;"></td>
-				<td><input class="button" type="button" onclick="insert('/')" value="&divide;"></td>
-				<td><input class="button" type="button" onclick="insert('*')" value="&times;"></td>
-			</tr>
-			<tr>
-				<td><input class="button" type="button" onclick="insert(9)" value="9"></td>
-				<td><input class="button" type="button" onclick="insert(8)" value="8"></td>
-				<td><input class="button" type="button" onclick="insert(7)" value="7"></td>
-				<td><input class="button" type="button" onclick="insert('+')" value="&plus;"></td>
-			</tr>
-			<tr>
-				<td><input class="button" type="button"  onclick="insert(6)" value="6"></td>
-				<td><input class="button" type="button" onclick="insert(5)" value="5"></td>
-				<td><input class="button" type="button" onclick="insert(4)" value="4"></td>
-				<td><input class="button" type="button" onclick="insert('-')" value="&minus;"></td>
-			</tr>
-			<tr>
-				<td><input class="button" type="button" onclick="insert(3)" value="3"></td>
-				<td><input class="button" type="button" onclick="insert(2)" value="2"></td>
-				<td><input class="button" type="button" onclick="insert(1)" value="1"></td>
-				<td rowspan="5"><input style="height: 106px;" class="button" type="button" onclick="equal()" value="="></td>
-			</tr>
-			<tr>
-				<td colspan=2><input style="width: 106px;" class="button" type="button" onclick="insert(0)" value="0"></td>
-				<td><input class="button" type="button" onclick="insert('.')" value="."></td>
-			</tr>
+		<div id="viewer" class="viewer">0</div>
+		<button class="num" data-num="7">7</button>
+		<button class="num" data-num="8">8</button>
+		<button class="num" data-num="9">9</button>
 
-		</table>
-		</center>
+		<button data-ops="plus" class="ops">+</button>
+    
+		<button class="num" data-num="4">4</button>
+		<button class="num" data-num="5">5</button>
+		<button class="num" data-num="6">6</button>
+
+		<button data-ops="minus" class="ops">-</button>
+
+		<button class="num" data-num="1">1</button>
+		<button class="num" data-num="2">2</button>
+		<button class="num" data-num="3">3</button>
+		<button data-ops="times" class="ops">*</button>
+		<button class="num" data-num="0">0</button>
+		<button class="num" data-num=".">.</button>
+		<button id="equals" class="equals" data-result="">=</button>
+
+		<button data-ops="divided by" class="ops">/</button>
+
+		<button id="reset" class="reset">Reset Universe?</button>
 	</div>
 
+	<script src="./script.js"></script>
 </body>
+
+
 </html>
