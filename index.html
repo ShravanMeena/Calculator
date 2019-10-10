@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Simple Calculator</title>
-	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script type="text/javascript">
 		function insert(num){
 			document.form.textview.value = document.form.textview.value + num;
@@ -26,6 +26,34 @@
 	</script>
 
 	<style type="text/css">
+		body {
+		  -webkit-animation: background 15s cubic-bezier(1,0,0,1) infinite;
+		  animation: background 15s cubic-bezier(1,0,0,1) infinite;  
+		}
+
+
+		@-webkit-keyframes background {
+		  0% { background-color: #5ebf4b;}
+		  25% { background-color: #34cac3;}  
+		  50% { background-color: #fca011;}
+		  75% { background-color: #fd374f;}
+		  100% { background-color: #874cbd;}
+		  
+		}
+
+		@keyframes background {
+		  0% { background-color: #5ebf4b;}
+		  25% { background-color: #34cac3;}  
+		  50% { background-color: #fca011;}
+		  75% { background-color: #fd374f;}
+		  100% { background-color: #874cbd;}
+			
+		}
+		h1
+		{
+			color:white;
+			padding:10px;
+		}
 		*{
 			margin : 0;
 			padding: 0;
@@ -38,12 +66,17 @@
 			margin:2px;
 			width: 50px;
 			height: 50px;
+			background:white;
+			border:0px;
 		}
 		.textview{
 			font-size: 25px;
 			margin:5px;
-			padding: 5px;
+			padding: 7px;
 			width: 203px;
+			
+			background:white;
+			
 		}
 
 	</style>
@@ -51,6 +84,8 @@
 <body>
 
 	<div class="main">
+		<center>
+		<h1>Simple Calculator</h1>
 		<form name="form">
 			<input class="textview" name="textview">
 		</form>
@@ -85,6 +120,7 @@
 			</tr>
 
 		</table>
+		</center>
 	</div>
 
 </body>
