@@ -28,22 +28,31 @@ TODO:
       operator; // Batman
 
     // When: Number is clicked. Get the current number selected
-    var setNum = function(numPressed) {
-      console.log(numPressed)
+    var setNum = function() {
       if (resultNum) { // If a result was displayed, reset number
-        if(typeof numPressed === undefined){
-          theNum = this.getAttribute("data-num");
-        }
+        theNum = this.getAttribute("data-num");
         resultNum = "";
       } else { // Otherwise, add digit to previous number (this is a string!)
-        if(numPressed === undefined){
-          theNum += this.getAttribute("data-num");
-        }
+        theNum += this.getAttribute("data-num");
       }
 
       viewer.innerHTML = theNum; // Display current number
 
     };
+
+    // When: Number key is pressed. Get the current number selected
+    var setNumKey = function(e) {
+      if(e.key >= 0 && e.key <= 9){
+        if (resultNum) { // If a result was displayed, reset number
+          theNum = e.key;
+          resultNum = "";
+        } else { // Otherwise, add digit to previous number (this is a string!)
+          theNum += e.key;
+        }
+
+        viewer.innerHTML = theNum; // Display current number
+        }
+    }
 
     // When: Operator is clicked. Pass number to oldNum and save operator
     var moveNum = function() {
@@ -133,13 +142,11 @@ TODO:
 
     // Add click event to numbers
     for (var i = 0, l = nums.length; i < l; i++) {
-      nums[i].onclick = setNum();
+      nums[i].onclick = setNum;
     }
 
     //Add keyboard event to numbers
-    document.addEventListener('keyup', function(e){
-      setNum(e.key);
-    });
+    document.onkeyup = setNumKey;
 
     // Add click event to operators
     for (var i = 0, l = ops.length; i < l; i++) {
