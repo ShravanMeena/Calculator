@@ -28,12 +28,17 @@ TODO:
       operator; // Batman
 
     // When: Number is clicked. Get the current number selected
-    var setNum = function() {
+    var setNum = function(numPressed) {
+      console.log(numPressed)
       if (resultNum) { // If a result was displayed, reset number
-        theNum = this.getAttribute("data-num");
+        if(typeof numPressed === undefined){
+          theNum = this.getAttribute("data-num");
+        }
         resultNum = "";
       } else { // Otherwise, add digit to previous number (this is a string!)
-        theNum += this.getAttribute("data-num");
+        if(numPressed === undefined){
+          theNum += this.getAttribute("data-num");
+        }
       }
 
       viewer.innerHTML = theNum; // Display current number
@@ -128,8 +133,13 @@ TODO:
 
     // Add click event to numbers
     for (var i = 0, l = nums.length; i < l; i++) {
-      nums[i].onclick = setNum;
+      nums[i].onclick = setNum();
     }
+
+    //Add keyboard event to numbers
+    document.addEventListener('keyup', function(e){
+      setNum(e.key);
+    });
 
     // Add click event to operators
     for (var i = 0, l = ops.length; i < l; i++) {
