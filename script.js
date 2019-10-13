@@ -1,7 +1,6 @@
 /*
 TODO:
     Limit number input
-    Disallow . from being entered multiple times
     Clean up structure
 */
 
@@ -29,14 +28,17 @@ TODO:
 
     // When: Number is clicked. Get the current number selected
     var setNum = function() {
-      if (resultNum) { // If a result was displayed, reset number
-        theNum = this.getAttribute("data-num");
-        resultNum = "";
-      } else { // Otherwise, add digit to previous number (this is a string!)
-        theNum += this.getAttribute("data-num");
-      }
+      //if . was pressed, then only do this if theNum doesn't already include a .
+      if ((this.getAttribute("data-num")==="." && theNum.indexOf(".") === -1) || this.getAttribute("data-num")!=="."){
+        if (resultNum) { // If a result was displayed, reset number
+          theNum = this.getAttribute("data-num");
+          resultNum = "";
+        } else { // Otherwise, add digit to previous number (this is a string!)
+          theNum += this.getAttribute("data-num");
+        }
 
-      viewer.innerHTML = theNum; // Display current number
+        viewer.innerHTML = theNum; // Display current number
+      }
 
     };
 
