@@ -147,12 +147,26 @@ TODO:
 
     // When: Key is pressed, find out if it's a valid one and send to relevant function if so
     var findKey = function(e){
-      //console.log(e.key);
       if((e.key >= 0 && e.key <= 9) || e.key == "."){
         setNumKey(e.key);
       }
-      if(e.key == "+"){
-        moveNumKey("plus");
+      // Operator keys
+      switch (e.key) {
+        case "+":
+          moveNumKey("plus");
+          break;
+        case "-":
+          moveNumKey("minus");
+          break;
+        case "*":
+          moveNumKey("times");
+          break;
+        case "/":
+          moveNumKey("divided by");
+          break;
+        // if another key is pressed then do nothing
+        default:
+          break;
       }
     }
 
