@@ -1,0 +1,76 @@
+body {
+    font-family: 'Dosis', sans-serif;
+}
+
+.calculator {
+    width: 20rem;
+    height: 33rem;
+    background-color:#555;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+
+
+.viewer {
+    width: 95%;
+    border-radius: 4px;
+    margin: 1.5rem 0;
+    display: flex;
+    background-color: #7bb581;
+    height: 3.5rem;
+    border-bottom: solid .3rem #5d8962;
+    border-right: solid .3rem #5d8962;
+
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    font-size: 34px;
+    color:darkolivegreen;
+}
+
+.number-pad {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+    justify-items: center;
+    align-content: space-around;
+}
+
+button {
+    font-family: 'Dosis', sans-serif;
+    background-color: grey;
+    border: none;
+    border-bottom: 3px solid #42403f;
+    border-right: 3px solid #42403f;
+    border-radius: 7px;
+    width: 3rem;
+    height: 3rem;
+    font-size: 20px;
+    color: #555;
+}
+
+button.clear {
+    margin-right: 0;
+    font-size: 30px;
+    color: #555;
+}
+
+button.ops {
+    background-color: #ff6a00;
+    border-bottom: 3px solid #db5700;
+    border-right: 3px solid #db5700;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+button.reset {
+    width: 100%;
+    font-size: 30px;
+    margin-top: 1rem;
+}
+ button.num {
+    font-size: 34px;
+ }
