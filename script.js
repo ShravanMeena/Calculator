@@ -61,6 +61,15 @@ TODO:
       equals.setAttribute("data-result", ""); // Reset result in attr
     };
 
+    // When: Operator is clicked. Pass number to oldNum and save operator
+    var moveNumKey = function(wordOperator) {
+      oldNum = theNum;
+      theNum = "";
+      operator = wordOperator;
+
+      equals.setAttribute("data-result", ""); // Reset result in attr
+    };
+
     // When: Equals is clicked. Calculate result
     var displayNum = function() {
 
@@ -138,8 +147,12 @@ TODO:
 
     // When: Key is pressed, find out if it's a valid one and send to relevant function if so
     var findKey = function(e){
+      //console.log(e.key);
       if((e.key >= 0 && e.key <= 9) || e.key == "."){
         setNumKey(e.key);
+      }
+      if(e.key == "+"){
+        moveNumKey("plus");
       }
     }
 
