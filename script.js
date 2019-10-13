@@ -168,6 +168,11 @@ TODO:
         case "Enter":
           displayNum();
           break;
+        case "Escape":
+        case "c":
+        case "C":
+          clearAll();
+          break;
         // if another key is pressed then do nothing
         default:
           break;
