@@ -164,6 +164,10 @@ TODO:
         case "/":
           moveNumKey("divided by");
           break;
+        case "=":
+        case "Enter":
+          displayNum();
+          break;
         // if another key is pressed then do nothing
         default:
           break;
