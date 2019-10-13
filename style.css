@@ -20,10 +20,10 @@ h1 {
 
 /* Gradient text only on Webkit */
 .warning {
-  background: -webkit-linear-gradient(45deg, #c97874 10%, #463042 90%);
+  background: -webkit-linear-gradient(45deg, #44e4d1 10%, #d0f980 90%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: #8c5059;
+  color: #44e4d1;
   font-weight: 400;
   margin: 0 auto 6em;
   max-width: 9em;
@@ -50,7 +50,7 @@ h1 {
 }
 
 .viewer {
-  color: #c97874;
+  color: #44e4d1;
   float: left;
   line-height: 3em;
   text-align: right;
@@ -112,7 +112,7 @@ button:focus::after {
 /* Reset button */
 .reset {
   background: rgba(201, 120, 116, 0.28);
-  color: #c97874;
+  color: #44e4d1;
   font-weight: 400;
   margin-left: -77px;
   padding: 0.5em 1em;
@@ -124,7 +124,7 @@ button:focus::after {
   /* When button is revealed */
 }
 .reset:hover {
-  background: #c97874;
+  background: #44e4d1;
   color: #100a1c;
 }
 .reset.show {
