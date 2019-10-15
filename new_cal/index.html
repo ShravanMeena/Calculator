@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Calculator</title>
+	<link href="./style.css" rel="stylesheet" type="text/css">
+	</link>
+</head>
+
+<body>
+	<div class="toggle-container">
+		<input type="checkbox" id="themeToggle">
+		<label for="themeToggle">Toggle</label>
+	</div>
+
+	<h1>JavaScript Calculator</h1>
+	<p class="warning">Don't divide by Zero.</p>
+	<div id="calculator" class="calculator">
+		<div id="viewer" class="viewer">You broke it!</div>
+
+
+		<button id="clear" class="clear">C</button>
+		<button data-ops="sin" class="ops">sin</button>
+		<button data-ops="cos" class="ops">cos</button>
+		<button data-ops="tan" class="ops">tan</button>
+
+
+		<button data-ops="square" class="ops">x<sup>2</sup></button>
+		<button data-ops="cube" class="ops">x<sup>3</sup></button>
+		<button data-ops="power" class="ops">x<sup>y</sup></button>
+		<button data-ops="square root" class="ops">&#8730; x</button>
+
+
+		<button class="num" data-num="7">7</button>
+		<button class="num" data-num="8">8</button>
+		<button class="num" data-num="9">9</button>
+
+		<button data-ops="plus" class="ops">+</button>
+
+		<button class="num" data-num="4">4</button>
+		<button class="num" data-num="5">5</button>
+		<button class="num" data-num="6">6</button>
+
+		<button data-ops="minus" class="ops">-</button>
+
+		<button class="num" data-num="1">1</button>
+		<button class="num" data-num="2">2</button>
+		<button class="num" data-num="3">3</button>
+		<button data-ops="times" class="ops">*</button>
+		<button class="num" data-num="0">0</button>
+		<button class="num" data-num=".">.</button>
+		<button id="equals" class="equals" data-result="">=</button>
+
+		<button data-ops="divided by" class="ops">/</button>
+
+		<button id="reset" class="reset">Reset Universe?</button>
+	</div>
+
+	<script src="./script.js"></script>
+	<script src="./dark-light-theme-toggle.js"></script>
+</body>
+
+
+</html>
