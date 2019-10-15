@@ -19,8 +19,14 @@
 	<h1>JavaScript Calculator</h1>
 	<p class="warning">Don't divide by Zero.</p>
 	<div id="calculator" class="calculator">
+		<div id="viewer" class="viewer">You broke it!</div>
+
+
 		<button id="clear" class="clear">C</button>
-		<div id="viewer" class="viewer" style="border-top-width: 0.5px;border-top-style: solid;border-right-width: 0.5px;border-right-style: solid;border-bottom-width: 0.5px;border-bottom-style: solid;border-left-style: solid;border-left-width: 0.5px;padding-top: 1px;padding-bottom: 1px;padding-left: 1px;padding-right: 1px;">You broke it!</div>
+		<button data-ops="sin" class="ops">sin</button>
+		<button data-ops="cos" class="ops">cos</button>
+		<button data-ops="tan" class="ops">tan</button>
+
 
 		<button data-ops="square" class="ops">x<sup>2</sup></button>
 		<button data-ops="cube" class="ops">x<sup>3</sup></button>
