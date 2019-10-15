@@ -15,7 +15,6 @@ TODO:
 
       return document.querySelectorAll(element); // Otherwise, returns a nodelist
     };
-
     // Variables
     var viewer = el("#viewer"), // Calculator screen where result is displayed
       equals = el("#equals"), // Equal button
@@ -116,6 +115,18 @@ TODO:
           resultNum = oldNum ** theNum;
           break;
 
+        case "sin":
+          resultNum = Math.sin(oldNum);
+          break;
+
+        case "cos":
+          resultNum = Math.cos(oldNum);
+          break;
+
+        case "tan":
+          resultNum = Math.tan(oldNum);
+          break;
+
           // If equal is pressed without an operator, keep number and continue
         default:
           resultNum = theNum;
@@ -123,7 +134,7 @@ TODO:
 
       // If NaN or Infinity returned
       if (!isFinite(resultNum)) {
-        if (isNaN(resultNum)) { // If result is not a number; set off by, eg, double-clicking operators
+        if (!isInt(resultNum) || !isFloat(resultNum)) { // If result is not a number; set off by, eg, double-clicking operators
           resultNum = "You broke it!";
         } else { // If result is infinity, set off by dividing by zero
           resultNum = "Look at what you've done";
