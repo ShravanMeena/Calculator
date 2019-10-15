@@ -15,7 +15,6 @@ TODO:
 
       return document.querySelectorAll(element); // Otherwise, returns a nodelist
     };
-
     // Variables
     var viewer = el("#viewer"), // Calculator screen where result is displayed
       equals = el("#equals"), // Equal button
