@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=DM+Serif+Text&display=swap');
 html {
   background: #100a1c;
   background-image: radial-gradient(50% 30% ellipse at center top, #201e40 0%, rgba(0, 0, 0, 0) 100%), radial-gradient(60% 50% ellipse at center bottom, #261226 0%, #100a1c 100%);
@@ -7,7 +8,7 @@ html {
 
 body {
   color: #6cacc5;
-  font: 300 18px/1.6 "Source Sans Pro", sans-serif;
+  font: 300 25px/1.6 'DM Serif Text', serif;
   margin: 0;
   padding: 5em 0 2em;
   text-align: center;
@@ -25,6 +26,7 @@ h1 {
   -webkit-text-fill-color: transparent;
   color: #44e4d1;
   font-weight: 400;
+  font-family: 'DM Serif Text', serif;
   margin: 0 auto 6em;
   max-width: 9em;
 }
@@ -53,14 +55,20 @@ h1 {
 }
 
 .viewer {
+  border-top: 3px double;
+  border-right: 3px double;
+  border-bottom: 3px double;
+  border-left: 3px double;
+  padding: 2px;
   color: #44e4d1;
-  float: left;
+  margin: 0px auto;
   line-height: 3em;
-  text-align: right;
+  text-align: center;
   text-overflow: ellipsis;
   overflow: hidden;
-  width: 7.5em;
+  width: 10em;
   height: 3em;
+  align-items: center;
 }
 
 button {
@@ -78,7 +86,6 @@ button {
 
 button:hover {
   background: #201e40;
-  transform: scale(1.08);
 }
 
 button:focus {
