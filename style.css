@@ -1,14 +1,19 @@
-@import url('https://fonts.googleapis.com/css?family=DM+Serif+Text&display=swap');
+@import url("https://fonts.googleapis.com/css?family=DM+Serif+Text&display=swap");
 html {
   background: #100a1c;
-  background-image: radial-gradient(50% 30% ellipse at center top, #201e40 0%, rgba(0, 0, 0, 0) 100%), radial-gradient(60% 50% ellipse at center bottom, #261226 0%, #100a1c 100%);
+  background-image: radial-gradient(
+      50% 30% ellipse at center top,
+      #201e40 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    radial-gradient(60% 50% ellipse at center bottom, #261226 0%, #100a1c 100%);
   background-attachment: fixed;
   color: #6cacc5;
 }
 
 body {
   color: #6cacc5;
-  font: 300 25px/1.6 'DM Serif Text', serif;
+  font: 300 25px/1.6 "DM Serif Text", serif;
   margin: 0;
   padding: 5em 0 2em;
   text-align: center;
@@ -26,7 +31,7 @@ h1 {
   -webkit-text-fill-color: transparent;
   color: #44e4d1;
   font-weight: 400;
-  font-family: 'DM Serif Text', serif;
+  font-family: "DM Serif Text", serif;
   margin: 0 auto 6em;
   max-width: 9em;
 }
@@ -82,6 +87,7 @@ button {
   width: 2em;
   height: 2em;
   transition: all 0.5s;
+  border-radius: 6px;
 }
 
 button:hover {
@@ -151,8 +157,8 @@ button:focus::after {
 /* Light mode theme colors and switcher */
 .light-theme {
   background: #423e4d;
-  background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);
-  background: linear-gradient(to right, #E9E4F0, #D3CCE3);
+  background: -webkit-linear-gradient(to right, #e9e4f0, #d3cce3);
+  background: linear-gradient(to right, #e9e4f0, #d3cce3);
 }
 
 .light-theme h1,
@@ -162,10 +168,21 @@ button:focus::after {
 
 .light-theme button:hover {
   background-color: #423e4d;
-  color: #D3CCE3;
+  color: #d3cce3;
 }
 
 .light-theme button.equals {
+  color: #5a5569;
+}
+
+.light-theme .viewer {
+  color: #5a5569;
+}
+
+.light-theme .warning {
+  background: #5a5569;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   color: #5a5569;
 }
 
@@ -176,7 +193,7 @@ button:focus::after {
   right: 45px;
 }
 
-input[type=checkbox] {
+input[type="checkbox"] {
   height: 0;
   width: 0;
   visibility: hidden;
@@ -194,7 +211,7 @@ label {
 }
 
 label:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 3px;
   left: 4px;
@@ -205,11 +222,11 @@ label:after {
   transition: 0.3s;
 }
 
-input:checked+label {
+input:checked + label {
   background: #5a5569;
 }
 
-input:checked+label:after {
+input:checked + label:after {
   left: calc(100% - 5px);
   transform: translateX(-100%);
 }
