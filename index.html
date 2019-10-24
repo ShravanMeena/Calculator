@@ -8,6 +8,7 @@
 	<title>Calculator</title>
 	<link href="./style.css" rel="stylesheet" type="text/css">
 	</link>
+
 </head>
 
 <body>
@@ -16,7 +17,7 @@
 		<label for="themeToggle">Toggle</label>
 	</div>
 
-	<h1>JavaScript Calculator</h1>
+	<h1 class="title">JavaScript Calculator</h1>
 	<p class="warning">Don't divide by Zero.</p>
 	<div id="calculator" class="calculator">
 		<div id="viewer" class="viewer">You broke it!</div>
@@ -28,9 +29,9 @@
 		<button data-ops="tan" class="ops">tan</button>
 
 
-		<button data-ops="square" class="ops">x<sup>2</sup></button>
-		<button data-ops="cube" class="ops">x<sup>3</sup></button>
-		<button data-ops="power" class="ops">x<sup>y</sup></button>
+		<button data-ops="square" class="ops">×<sup>²</sup></button>
+		<button data-ops="cube" class="ops">×<sup>³</sup></button>
+		<button data-ops="power" class="ops">×<sup>y</sup></button>
 		<button data-ops="square root" class="ops">&#8730; x</button>
 
 
@@ -45,11 +46,12 @@
 		<button class="num" data-num="6">6</button>
 
 		<button data-ops="minus" class="ops">-</button>
+		<button data-ops="minus" class="ops">-</button>
 
 		<button class="num" data-num="1">1</button>
 		<button class="num" data-num="2">2</button>
 		<button class="num" data-num="3">3</button>
-		<button data-ops="times" class="ops">*</button>
+		<button data-ops="times" class="ops">×</button>
 		<button class="num" data-num="0">0</button>
 		<button class="num" data-num=".">.</button>
 		<button id="equals" class="equals" data-result="">=</button>
