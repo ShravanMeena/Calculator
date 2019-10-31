@@ -39,7 +39,7 @@ h1 {
 .calculator {
   font-size: 28px;
   margin: 0 auto;
-  width: 10em;
+  width: 16em;
 }
 
 .calculator::before,
@@ -84,7 +84,7 @@ button {
   float: left;
   font: inherit;
   margin: 0.25em;
-  width: 2em;
+  width: 3em;
   height: 2em;
   transition: all 0.5s;
   border-radius: 6px;
@@ -319,7 +319,7 @@ html.transition *:after {
 
 @media (min-width: 420px) {
   .calculator {
-    width: 12em;
+    width: 16em;
   }
 
   .viewer {
