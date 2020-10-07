@@ -115,6 +115,10 @@ TODO:
           resultNum = oldNum ** theNum;
           break;
 
+        case "ln":
+          resultNum = Math.log(oldNum);
+          break;
+
         case "sin":
           resultNum = Math.sin(oldNum);
           break;
@@ -125,6 +129,18 @@ TODO:
 
         case "tan":
           resultNum = Math.tan(oldNum);
+          break;
+
+        case "arcsin":
+          resultNum = Math.asin(oldNum);
+          break;
+      
+        case "arccos":
+          resultNum = Math.acos(oldNum);
+          break;
+  
+        case "arctan":
+          resultNum = Math.atan(oldNum);
           break;
 
           // If equal is pressed without an operator, keep number and continue
